@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- <div class="container-form display-center"> -->
+
+    <form>
+      <label for="username" class="subtitles">Username</label>
+      <input type="text" placeholder="username" id="username-input" required />
+      <label for="Interval" class="subtitles">Interval</label>
+      <fieldset class="interval-fieldset">
+        <input
+          type="radio"
+          name="interval"
+          id="short-interval"
+          value="20"
+          required
+          checked
+        />
+        <label for="short-interval" class="font-form">0-20</label><br />
+        <input type="radio" name="interval" id="medium-interval" value="40" />
+        <label for="medium-interval" class="font-form">0-40</label><br />
+        <input type="radio" name="interval" id="long-interval" value="60" />
+        <label for="long-interval" class="font-form">0-60</label>
+      </fieldset>
+      <label for="Interval" class="subtitles">Dificulty</label>
+      <fieldset class="dificulty-fieldset">
+        <input
+          type="radio"
+          name="dificulty"
+          id="easy-dificulty"
+          value="1"
+          required
+          checked
+        />
+        <label for="easy-dificulty" class="font-form"
+          >Unlimited tries and hints (easy)</label
+        ><br />
+        <input type="radio" name="dificulty" id="medium-dificulty" value="2" />
+        <label for="medium-dificulty" class="font-form"
+          >Ten tries and hints. (medium)</label
+        ><br />
+        <input type="radio" name="dificulty" id="hard-dificulty" value="3" />
+        <label for="hard-dificulty" class="font-form"
+          >Ten tries and no hints. (hard)</label
+        >
+      </fieldset>
+      <input type="submit" class="submit-button subtitles" value="Submit" />
+    </form>
+    <div class="form-blur"></div>
+    <div class="game display-none" id="game">
+      <div class="container-game">
+        <img
+          src="./trophy-svgrepo-com (1).svg"
+          alt="Leaderboard button"
+          class="leaderboard-button"
+        />
+        <div class="div-game">
+          <div class="welcome-mesage"></div>
+          <div class="joculet display-center">
+            <input type="number" class="your-number" />
+            <div class="display-center orientation-row">
+              <button class="verify-button">Verify</button>
+              <button class="reset-button">Reset</button>
+            </div>
+            <div class="big-hint display-center">
+              <div class="hints">Find the secret code!</div>
+              <div class="number-of-tries"></div>
+            </div>
+          </div>
+        </div>
+        <div class="container-leaderboard">
+          <div class="leaderboard-title">🏆Leaderboard🏆</div>
+          <div class="bottom-line container-row">
+            <div class="position1 position"></div>
+            <div class="nume1 nume"></div>
+            <div class="scor1 scor"></div>
+          </div>
+          <div class="bottom-line container-row">
+            <div class="position2 position"></div>
+            <div class="nume2 nume"></div>
+            <div class="scor2 scor"></div>
+          </div>
+          <div class="bottom-line container-row">
+            <div class="position3 position"></div>
+            <div class="nume3 nume"></div>
+            <div class="scor3 scor"></div>
+          </div>
+          <div class="bottom-line container-row">
+            <div class="position4 position"></div>
+            <div class="nume4 nume"></div>
+            <div class="scor4 scor"></div>
+          </div>
+          <div class="bottom-line container-row">
+            <div class="position5 position"></div>
+            <div class="nume5 nume"></div>
+            <div class="scor5 scor"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

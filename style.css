@@ -1,0 +1,328 @@
+@font-face {
+  font-family: "firstFont";
+  src: url("./pirulen\ rg.ttf");
+}
+
+/*variables*/
+:root {
+  --primary-color--: #051e23;
+  --secondary-color--: #421b98;
+  --third-color--: rgb(224, 224, 224);
+  --primary-font-color--: #0000;
+  --primary-height--: 26rem;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./5603526_1876.jpg);
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+}
+/* utilities */
+.subtitles {
+  font-family: "firstFont";
+  font-size: large;
+  color: var(--secondary-color--);
+}
+.display-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.orientation-row {
+  flex-direction: column;
+}
+.display-none {
+  display: none;
+}
+/*style content*/
+form,
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 5px solid var(--secondary-color--);
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(221, 221, 221, 0.9) 0%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  width: 40rem;
+}
+
+label {
+  font-size: small;
+  margin: 1rem;
+  color: var(--primary-color--);
+  font-family: "firstFont";
+}
+
+.container-form {
+  height: 100vh;
+  width: 100vw;
+}
+.submit-button {
+  margin: 1rem;
+}
+.interval-fieldset,
+.dificulty-fieldset {
+  width: 80%;
+  max-width: 30rem;
+  min-width: 280px;
+  height: 3.5rem;
+  border: 2px solid var(--secondary-color--);
+  border-radius: 5px;
+  background: linear-gradient(
+    60deg,
+    rgb(241, 241, 241) 0%,
+    rgb(248, 248, 248) 100%
+  );
+}
+
+#username-input {
+  height: 2rem;
+  width: 80%;
+  max-width: 30rem;
+  min-width: 280px;
+  padding: 5px 12px;
+  background: linear-gradient(
+    60deg,
+    rgb(241, 241, 241) 0%,
+    rgb(248, 248, 248) 100%
+  );
+  border: solid 2px var(--secondary-color--);
+  border-radius: 5px;
+}
+form > label {
+  font-size: medium;
+}
+.submit-button {
+  border: solid 2px var(--secondary-color--);
+  border-radius: 5px;
+  background: linear-gradient(
+    60deg,
+    rgb(241, 241, 241) 0%,
+    rgb(248, 248, 248) 100%
+  );
+}
+
+.submit-button:hover {
+  background: var(--secondary-color--);
+  color: white;
+}
+/*joc*/
+.your-number {
+  text-align: center;
+  font-family: "firstFont";
+  font-size: smaller;
+  color: var(--secondary-color--);
+  border: solid 2px var(--secondary-color--);
+  border-radius: 5px;
+  padding: 0.1rem;
+  margin: 2rem;
+  background: linear-gradient(
+    60deg,
+    rgb(241, 241, 241) 0%,
+    rgb(248, 248, 248) 100%
+  );
+  width: 4rem;
+  height: 4rem;
+}
+.joculet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number-of-tries {
+  align-self: flex-end;
+
+  font-family: "firstFont";
+  font-size: smaller;
+  color: var(--secondary-color--);
+  border-top: solid 2px var(--secondary-color--);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: linear-gradient(
+    60deg,
+    rgb(241, 241, 241) 0%,
+    rgb(248, 248, 248) 100%
+  );
+}
+.reset-button,
+.verify-button {
+  font-family: "firstFont";
+  font-size: smaller;
+  color: var(--secondary-color--);
+  width: 5rem;
+  margin-right: 2rem;
+  border: solid 2px var(--secondary-color--);
+  border-radius: 5px;
+  background: linear-gradient(
+    60deg,
+    rgb(241, 241, 241) 0%,
+    rgb(248, 248, 248) 100%
+  );
+}
+.verify-button {
+  margin-bottom: 1rem;
+}
+
+.verify-button:hover {
+  background: #421b98;
+  color: white;
+}
+
+.reset-button:hover {
+  background: #421b98;
+  color: white;
+}
+.big-hint {
+  text-align: center;
+  height: 8rem;
+  width: 8rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: solid 2px var(--secondary-color--);
+  border-radius: 5px;
+  background: linear-gradient(
+    60deg,
+    rgb(241, 241, 241) 0%,
+    rgb(248, 248, 248) 100%
+  );
+  font-family: "firstFont";
+  font-size: 1rem;
+  color: var(--secondary-color--);
+}
+.game {
+  display: none;
+  height: var(--primary-height--);
+}
+.welcome-mesage {
+  margin-bottom: 7rem;
+  text-align: center;
+  font-family: "firstFont";
+  font-size: 1rem;
+  color: var(--secondary-color--);
+}
+.leaderboard-button {
+  padding: 5px;
+  align-self: flex-end;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 5px;
+}
+
+.leaderboard-button:hover {
+  background-color: rgba(205, 161, 244, 0.5);
+}
+.container-game {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+.container-leaderboard {
+  width: 80%;
+  height: 80%;
+  flex-direction: column;
+  justify-content: space-between;
+  /* display: grid;
+  grid-template-rows: 0fr 0.7fr 1fr 1fr 1fr 1fr;
+  align-items: center; */
+  font-family: "firstFont";
+}
+
+.container-row {
+  padding: 10px;
+  /* height: 100%; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  align-items: end;
+  font-size: smaller;
+}
+.bottom-line {
+  border-bottom: solid 2px #051e232e;
+}
+.scor {
+  justify-self: end;
+}
+
+.nume {
+  justify-items: center;
+}
+
+.leaderboard-title {
+  text-align: center;
+}
+.container-leaderboard {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .game {
+    height: 80vh;
+    min-height: 720px;
+  }
+  .joculet {
+    height: 18rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .your-number {
+    width: 6rem;
+    height: 6rem;
+    justify-self: end;
+    grid-area: 1/1/2/2;
+  }
+  .verify-button {
+    height: 2.4rem;
+  }
+  .reset-button {
+    height: 2.4rem;
+  }
+  .container-row {
+    height: 5rem;
+    width: 5rem;
+    justify-self: start;
+    grid-area: 1/2/2/3;
+  }
+  .big-hint {
+    justify-self: center;
+    grid-area: 2/1/3/3;
+    width: 15rem;
+    height: 10rem;
+    font-size: larger;
+    padding: 1rem;
+    margin-top: 4rem;
+  }
+  .welcome-mesage {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+  }
+  .container-leaderboard {
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .bottom-line {
+    width: 80vw;
+  }
+  form {
+    height: 80vh;
+  }
+  .dificulty-fieldset {
+    height: 7rem;
+  }
+  .subtitles {
+    margin-top: 4rem;
+  }
+}
